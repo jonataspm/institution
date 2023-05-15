@@ -9,9 +9,36 @@ function App() {
   return (
     <body>
       <div className='menu'>
+        <SideBar />
+        <div className='sideRight'>
           <NavBar />
-          <SideBar />
-          
+          <div className='sideContent'>
+            
+            <h1>Dashboard</h1>
+            
+            <div className='displayContent1'>
+              <div className='screenSideContent'>
+                <p>Testando</p>
+              </div>
+              <div className='screenSideContentProject'>
+                <p>Testando</p>
+              </div>
+              <div className='screenSideContent'>
+                <p>Testando</p>
+              </div>
+            </div>
+
+            <div className='displayContent2'>
+              <div className='screenSideContent'>
+                <p>Testando</p>
+              </div>
+
+              <div className='screenSideContentProject'>
+                <p>Testando</p>
+              </div>
+            </div>
+          </div>
+        </div>  
       </div>
     </body>
   );
