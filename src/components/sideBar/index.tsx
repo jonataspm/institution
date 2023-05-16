@@ -1,22 +1,22 @@
 import React, {Component} from "react";
-import {ButtonBar} from "../buttonBar/buttonBar"
-
-const type = "";
-
-function Tapped(){
-
-}
+import {ButtonBar} from "../buttonBar/index"
+import { Logoutbutton, SideBarDiv } from "./style";
 
 export class SideBar extends Component{
     render(){return (
-        <div className="side-bar">
-            <ButtonBar type='normal' name='menu'/>
-            <ButtonBar type='normal' name='home'/>
-            <ButtonBar type='normal' name='volutarios'/>
-            <ButtonBar type='normal' name='chat'/>
-            <ButtonBar type='normal' name='ajuste'/>
-            <ButtonBar type='normal' name='sair'/>
-        </div>
+        <SideBarDiv>
+            
+            <ButtonBar type='l' name='menu'/>
+            <ButtonBar type='l' name='home'/>
+            <ButtonBar type='l' name='people'/>
+            <ButtonBar type='l' name='send'/>
+            <ButtonBar type='l' name='setting'/>
+           
+            <Logoutbutton >
+                <ButtonBar type='l' name='logout'/>
+            </Logoutbutton>
+
+        </SideBarDiv>
     );
     }
 }
