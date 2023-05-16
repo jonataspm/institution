@@ -1,16 +1,19 @@
 import React, {Component} from "react";
+import { InputMenu, NavBarDiv } from "./style";
  
 export class NavBar extends Component{
     render(){return (
-            <div className="nav-bar">
+            <NavBarDiv>
             <img className="logo" src="" alt="logo" />
-            <input className="inputMenu" type="text" placeholder="Pesquisar" name="" id=""/>
+            <InputMenu type="text" placeholder="Pesquisar" name="" id=""/>
+           
             <div className='profile'>
                 <a>Olá, joojontas</a>
                 <img src="" alt=""/>
                 <i/>
             </div>
-      </div>
+
+      </NavBarDiv>
     );
     }
   }

@@ -9,7 +9,7 @@ function App() {
   return (
     <body>
       <div className='menu'>
-        <SideBar />
+        <SideBar selectedButtonType={''} />
         <div className='sideRight'>
           <NavBar />
           <div className='sideContent'>

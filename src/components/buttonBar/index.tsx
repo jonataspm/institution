@@ -3,28 +3,35 @@ import { ButtonSideBar } from "./style";
 import { Normalimage } from "../../images";
 import { Boldimage } from "../../images";
 
+
+type ButtonType = "l" | "b";
+
 type ButtonBarProps = {
-    type: string;
-    name: string;
-}
+  type: ButtonType;
+  name: string;
+  onClick?: () => void;
+};
 
-export function ButtonBar({type, name }: ButtonBarProps) {
+export function ButtonBar({ type, name, onClick }: ButtonBarProps) {
     let src = "";
-
+    let active = ""
+    
     if (type === "l") {
-        src = Normalimage[name];
-      } else if (type === "b") {
-        src = Boldimage[name];
-      }
-
-    const href =`#${name}`;
-
+      src = Normalimage[name];
+      active = "Notactive"
+    } else if (type === "b") {
+      src = Boldimage[name];
+      active = "active"
+    }
+  
+    const href = `#${name}`;
+  
     return (
-        <ButtonSideBar href={href}>
-            <div className="buttonContent">
-                <img className="icon" src={src} alt={name}/>
-                <p>{name}</p>
-            </div>
-        </ButtonSideBar>
+      <ButtonSideBar className={active} href={href} onClick={onClick} type={type}>
+        <div className="buttonContent">
+          <img className="icon" src={src} alt={name} />
+          <p>{name}</p>
+        </div>
+      </ButtonSideBar>
     );
-}
+  }
