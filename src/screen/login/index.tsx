@@ -1,14 +1,14 @@
 import React from "react";
-import { BackgroundImg } from "./style";
+import { Background } from "./style";
+import { LoginContent } from "./components/loginContent/index ";
 
 
 export function LoginPage(){
     return(
-        <BackgroundImg>
-            
-                <p>OIE</p>
-         
-        </BackgroundImg>
+        <Background>
+                
+         <p>oie</p>
+        </Background>
     );
 }
 
