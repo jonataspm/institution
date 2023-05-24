@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 :root{
-  --Pcolor: #514EFF ;
+  --Pcolor: #514EFF;
+  --Pboldcolor: #3937C5 ;
   --Scolor: #4240DB;
   --Bcolor: #FFFFFF;
   --Bbcolor: #BFBFBF;
