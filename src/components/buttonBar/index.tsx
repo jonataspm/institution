@@ -2,6 +2,7 @@ import React from "react";
 import { ButtonSideBar } from "./style";
 import { Normalimage } from "../../images";
 import { Boldimage } from "../../images";
+import { useNavigate } from "react-router-dom";
 
 
 type ButtonType = "l" | "b";
@@ -24,10 +25,12 @@ export function ButtonBar({ type, name, onClick }: ButtonBarProps) {
       active = "active"
     }
   
-    const href = `#${name}`;
-  
+  function NavTo(){
+    useNavigate()(`/${name}`)
+  }
+
     return (
-      <ButtonSideBar className={active} href={href} onClick={onClick} type={type}>
+      <ButtonSideBar className={active} onClick={NavTo} type={type}>
         <div className="buttonContent">
           <img className="icon" src={src} alt={name} />
           <p>{name}</p>

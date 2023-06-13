@@ -3,6 +3,7 @@ import { Background } from "./style";
 import { LoginContent } from "./components/loginContent/index ";
 import  loginImg  from './images/peopples.svg'
 import  RegisterImg  from './images/celebration.svg'
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -21,11 +22,14 @@ const handleSignUpClick = () => {
     container?.classList.remove("sign-up-mode");
   };
 
+  const navigate = useNavigate();
+
+  const goHome = () => {
+    navigate('/home');
+  };
 
     return(
         <body>
-            
-        
           <Background className="tudo">
             <div className="container">
               <div className="forms-container">
@@ -40,27 +44,7 @@ const handleSignUpClick = () => {
                       <i className="fas fa-lock"></i>
                       <input type="password" placeholder="Password" />
                     </div>
-                    <input type="submit" value="Entrar" className="btn solid" />
-                    <p className="">Ainda não possui conta? 
-                        <b>
-                            <a onClick={handleSignUpClick}> Registrar</a>
-                        </b>
-                    </p>
-                    <p className="social-text">Or Sign in with social platforms</p>
-                    <div className="social-media">
-                      <a href="#" className="social-icon">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                      <a href="#" className="social-icon">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                      <a href="#" className="social-icon">
-                        <i className="fab fa-google"></i>
-                      </a>
-                      <a href="#" className="social-icon">
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                    </div>
+                    <input  type="submit" value="Entrar" className="btn solid" onClick={goHome}/>
                   </form>
                   <form action="#" className="sign-up-form">
                     <h2 className="title">Registar</h2>
@@ -77,26 +61,6 @@ const handleSignUpClick = () => {
                       <input type="password" placeholder="Password" />
                     </div>
                     <input type="submit" className="btn" value="Registar" />
-                    <p className="">Já possui conta? 
-                        <b>
-                            <a onClick={handleSignInClick}> Entrar</a>
-                        </b>
-                    </p>
-                    <p className="social-text">Or Sign up with social platforms</p>
-                    <div className="social-media">
-                      <a href="#" className="social-icon">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                      <a href="#" className="social-icon">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                      <a href="#" className="social-icon">
-                        <i className="fab fa-google"></i>
-                      </a>
-                      <a href="#" className="social-icon">
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                    </div>
                   </form>
                 </div>
               </div>
