@@ -7,6 +7,7 @@ import { LoginPage } from './screen/login';
 import HomeContent from './screen/contents/homeContent';
 import VoluenteerContent from './screen/contents/volunteer';
 import ProfileVoluenteerContent from './screen/contents/volunteer/profile';
+import ProjectContent from './screen/contents/Project';
 
 
 //<VoluenteerContent />
@@ -19,7 +20,7 @@ function App() {
       <div className='sideRight'>
         <NavBar />
         <div className='sideContent'>
-          <VoluenteerContent/>         
+          <ProjectContent/>         
         </div>
       </div>  
     </div>
