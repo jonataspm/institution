@@ -1,12 +1,15 @@
 import { useNavigate } from 'react-router'
 import './style.css'
+import {ProfileImage } from '../../images'
 
 export const LandingPage = () => {
   const navigate = useNavigate()
 
   return (
     <div className='landpage'>
-      <header>Voluntação</header>
+      <header>
+        <img src={ProfileImage['logo']} alt="logo" className="logoIMG" />
+      </header>
       <main>
         <section className='introduction'>
           <div className='inner_introduction'>
@@ -24,7 +27,7 @@ export const LandingPage = () => {
                   navigate('/login')
                 }}
               >
-                Participe
+                Entrar
               </button>
             </div>
           </div>

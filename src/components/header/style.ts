@@ -15,6 +15,18 @@ export const NavBarDiv = styled.div`
   .logo {
     width: 10%;
   }
+
+  .profileHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+            margin-left:5px;
+            border-radius: 50%;
+            max-width: 40%;
+            max-height: 40%;
+    }
+  }
 `
 
 export const InputMenu = styled.input`

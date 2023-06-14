@@ -1,5 +1,5 @@
 import { InputMenu, NavBarDiv } from './style'
-import { Logo } from '../../images/index'
+import { Logo, ProfileImage } from '../../images/index'
 import { useNavigate } from 'react-router'
 
 export const Header = () => {
@@ -18,9 +18,9 @@ export const Header = () => {
 
       <InputMenu type='text' placeholder='Pesquisar' name='' id='' />
 
-      <div className='profile'>
-        <a>Olá, Jonatas</a>
-        <img src='' alt='' />
+      <div className='profileHeader'>
+        <a>Olá, João</a>
+        <img src={ProfileImage['joao']} alt='joao' />
         <i />
       </div>
     </NavBarDiv>

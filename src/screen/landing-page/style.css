@@ -5,11 +5,18 @@
 
 .landpage header{
   padding: 2rem;
-  text-align: center;
   background-color: var(--Pcolor);
   color: #fff;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
+.logoIMG{
+  width: 20%;
+}
+
 
 .landpage .introduction {
   height: 25rem;

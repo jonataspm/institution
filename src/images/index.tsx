@@ -15,7 +15,10 @@ import Bbriefcase from './bold/briefcase.svg'
 import jonatas from './profiles/jonatas.png'
 import flavio from './profiles/flavio.png'
 import logo from './assets/logo.png'
-
+import fakeDash from './profiles/fakeDash.png'
+import logoLP from './profiles/logo.png'
+import joao from './profiles/Joao.png'
+import fakeChat from './profiles/fakeChat.png'
 interface ImagePaths {
   [key: string]: string
 }
@@ -43,6 +46,10 @@ export const Boldimage: ImagePaths = {
 export const ProfileImage: ImagePaths = {
   jonatas: jonatas,
   flavio: flavio,
+  joao: joao,
+  logo: logoLP,
+  fakeDash: fakeDash,
+  fakeChat: fakeChat,
 }
 
 export const Logo: ImagePaths = {

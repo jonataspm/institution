@@ -50,21 +50,6 @@ export const LoginPage = () => {
                     <a onClick={handleSignUpClick}> Registrar</a>
                   </b>
                 </p>
-                <p className='social-text'>Or Sign in with social platforms</p>
-                <div className='social-media'>
-                  <a href='#' className='social-icon'>
-                    <i className='fab fa-facebook-f'></i>
-                  </a>
-                  <a href='#' className='social-icon'>
-                    <i className='fab fa-twitter'></i>
-                  </a>
-                  <a href='#' className='social-icon'>
-                    <i className='fab fa-google'></i>
-                  </a>
-                  <a href='#' className='social-icon'>
-                    <i className='fab fa-linkedin-in'></i>
-                  </a>
-                </div>
               </form>
               <form action='#' className='sign-up-form'>
                 <h2 className='title'>Registar</h2>
@@ -87,21 +72,6 @@ export const LoginPage = () => {
                     <a onClick={handleSignInClick}> Entrar</a>
                   </b>
                 </p>
-                <p className='social-text'>Or Sign up with social platforms</p>
-                <div className='social-media'>
-                  <a href='#' className='social-icon'>
-                    <i className='fab fa-facebook-f'></i>
-                  </a>
-                  <a href='#' className='social-icon'>
-                    <i className='fab fa-twitter'></i>
-                  </a>
-                  <a href='#' className='social-icon'>
-                    <i className='fab fa-google'></i>
-                  </a>
-                  <a href='#' className='social-icon'>
-                    <i className='fab fa-linkedin-in'></i>
-                  </a>
-                </div>
               </form>
             </div>
           </div>
