@@ -1,11 +1,10 @@
-import React from "react";
 import { ButtonSideBar } from "./style";
 import { Normalimage } from "../../images";
 import { Boldimage } from "../../images";
-import { useNavigate } from "react-router-dom";
 
 
-type ButtonType = "l" | "b";
+export type ButtonType = "l" | "b";
+export type ActiveType = "active" | "Notactive";
 
 type ButtonBarProps = {
   type: ButtonType;
@@ -13,9 +12,9 @@ type ButtonBarProps = {
   onClick?: () => void;
 };
 
-export function ButtonBar({ type, name, onClick }: ButtonBarProps) {
+export const ButtonBar = ({ type, name, onClick }: ButtonBarProps) => {
     let src = "";
-    let active = ""
+    let active: ActiveType = "Notactive"
     
     if (type === "l") {
       src = Normalimage[name];
@@ -25,12 +24,8 @@ export function ButtonBar({ type, name, onClick }: ButtonBarProps) {
       active = "active"
     }
   
-  function NavTo(){
-    useNavigate()(`/${name}`)
-  }
-
     return (
-      <ButtonSideBar className={active} onClick={NavTo} type={type}>
+      <ButtonSideBar className={active} onClick={onClick} type={type}>
         <div className="buttonContent">
           <img className="icon" src={src} alt={name} />
           <p>{name}</p>
