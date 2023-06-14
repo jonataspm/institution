@@ -1,10 +1,11 @@
-import React from "react";
 import { ButtonSideBar } from "./style";
 import { Normalimage } from "../../images";
 import { Boldimage } from "../../images";
+import { useEffect } from "react";
 
 
-type ButtonType = "l" | "b";
+export type ButtonType = "l" | "b";
+export type ActiveType = "active" | "Notactive";
 
 type ButtonBarProps = {
   type: ButtonType;
@@ -12,9 +13,9 @@ type ButtonBarProps = {
   onClick?: () => void;
 };
 
-export function ButtonBar({ type, name, onClick }: ButtonBarProps) {
+export const ButtonBar = ({ type, name, onClick }: ButtonBarProps) => {
     let src = "";
-    let active = ""
+    let active: ActiveType = "Notactive"
     
     if (type === "l") {
       src = Normalimage[name];

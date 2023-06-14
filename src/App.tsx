@@ -6,8 +6,6 @@ import {SideBar} from './components/sideBar'
 import { LoginPage } from './screen/login';
 import HomeContent from './screen/contents/homeContent';
 
-
-
 function App() {
   return (
     <body>
@@ -16,7 +14,7 @@ function App() {
       <div className='sideRight'>
         <NavBar />
         <div className='sideContent'>
-          <HomeContent/>         
+          <HomeContent/>
         </div>
       </div>  
     </div>

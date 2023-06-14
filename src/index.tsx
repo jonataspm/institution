@@ -1,15 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Pages
+import { LoginPage } from './screen/login';
+import App from './App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<LoginPage />}/>
+      <Route path='/home' element={<App />}/>
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
