@@ -12,7 +12,6 @@ export function LoginPage(){
 
 
 const handleSignUpClick = () => {
-    debugger;
     const container = document.querySelector(".container");
     container?.classList.add("sign-up-mode");
   };

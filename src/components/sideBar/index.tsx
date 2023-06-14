@@ -1,66 +1,53 @@
-import React, { Component } from "react";
-import { ButtonBar } from "../buttonBar/index";
-import { Logoutbutton, SideBarDiv } from "./style";
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router'
+import { Logoutbutton, SideBarDiv } from './style'
+import { ButtonBar } from '../buttonBar'
 
-type SideBarProps = {
-  selectedButtonType: string;
-  onButtonClick: (buttonType: string) => void;
-};
+interface NavButtonProps {
+  iconName: string
+  label: string
+  onclick: () => void
+}
 
-type SideBarState = {
-  selectedButtonType: string;
-};
+export const SideBar = () => {
+  const navigate = useNavigate()
 
-export class SideBar extends Component<SideBarProps, SideBarState> {
-  constructor(props: SideBarProps) {
-    super(props);
-    this.state = {
-      selectedButtonType: "home",
-    };
-  }
+  const navButtons: NavButtonProps[] = [
+    {
+      iconName: 'menu',
+      label: 'Inicio',
+      onclick: () => {
+        navigate('/home')
+      },
+    },
+    {
+      iconName: 'people',
+      label: 'Voluntarios',
+      onclick: () => {
+        navigate('/test')
+      },
+    },
+    {
+      iconName: 'send',
+      label: 'Chat',
+      onclick: () => {
+        navigate('/chat')
+      },
+    },
+  ]
 
-  handleButtonClick(buttonType: string) {
-    this.setState({ selectedButtonType: buttonType });
-    this.props.onButtonClick(buttonType);
-  }
-  
-  render() {
-    const buttonType = this.state.selectedButtonType;
-    return (
-      <SideBarDiv>
-        <ButtonBar
-          type={buttonType === "menu" ? "b" : "l"}
-          name="menu"
-          onClick={() => this.handleButtonClick("menu")}
-        />
-        <ButtonBar
-          type={buttonType === "home" ? "b" : "l"}
-          name="home"
-          onClick={() => this.handleButtonClick("home")}
-        />
-        <ButtonBar
-          type={buttonType === "people" ? "b" : "l"}
-          name="people"
-          onClick={() => this.handleButtonClick("people")}
-        />
-        <ButtonBar
-          type={buttonType === "send" ? "b" : "l"}
-          name="send"
-          onClick={() => this.handleButtonClick("send")}
-        />
-        <ButtonBar
-          type={buttonType === "setting" ? "b" : "l"}
-          name="setting"
-          onClick={() => this.handleButtonClick("setting")}
-        />
-        <Logoutbutton>
+  return (
+    <SideBarDiv>
+
+      {navButtons.map((nav) => {
+        return (
           <ButtonBar
-            type={buttonType === "logout" ? "b" : "l"}
-            name="logout"
-            onClick={() => this.handleButtonClick("logout")}
+            type={nav.iconName === "menu" ? "b" : "l"}
+            name={nav.label}
+            onClick={() => nav.onclick()}
           />
-        </Logoutbutton>
-      </SideBarDiv>
-    );
-  }
+        )
+      })}
+    </SideBarDiv>
+  )
 }
