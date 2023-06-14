@@ -14,7 +14,7 @@ export class SideBar extends Component<SideBarProps, SideBarState> {
   constructor(props: SideBarProps) {
     super(props);
     this.state = {
-      selectedButtonType: "",
+      selectedButtonType: "home",
     };
     this.handleButtonClick = this.handleButtonClick.bind(this);
   }

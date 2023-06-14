@@ -24,10 +24,8 @@ export function ButtonBar({ type, name, onClick }: ButtonBarProps) {
       active = "active"
     }
   
-    const href = `#${name}`;
-  
     return (
-      <ButtonSideBar className={active} href={href} onClick={onClick} type={type}>
+      <ButtonSideBar className={active} onClick={onClick} type={type}>
         <div className="buttonContent">
           <img className="icon" src={src} alt={name} />
           <p>{name}</p>
