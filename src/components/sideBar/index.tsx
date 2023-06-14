@@ -1,53 +1,53 @@
-import React, { useContext } from 'react'
-import { useNavigate } from 'react-router'
+import React, { useState } from 'react'
+import { ButtonBar } from '../buttonBar/index'
 import { Logoutbutton, SideBarDiv } from './style'
-import { ButtonBar } from '../buttonBar'
 
-interface NavButtonProps {
-  iconName: string
-  label: string
-  onclick: () => void
+type SideBarProps = {
+  selectedButtonType: string
 }
 
-export const SideBar = () => {
-  const navigate = useNavigate()
+export const SideBar: React.FC<SideBarProps> = ({ selectedButtonType }) => {
+  const [buttonType, setButtonType] = useState(selectedButtonType)
 
-  const navButtons: NavButtonProps[] = [
-    {
-      iconName: 'menu',
-      label: 'Inicio',
-      onclick: () => {
-        navigate('/home')
-      },
-    },
-    {
-      iconName: 'people',
-      label: 'Voluntarios',
-      onclick: () => {
-        navigate('/test')
-      },
-    },
-    {
-      iconName: 'send',
-      label: 'Chat',
-      onclick: () => {
-        navigate('/chat')
-      },
-    },
-  ]
+  const handleButtonClick = (buttonType: string) => {
+    setButtonType(buttonType)
+  }
 
   return (
     <SideBarDiv>
-
-      {navButtons.map((nav) => {
-        return (
-          <ButtonBar
-            type={nav.iconName === "menu" ? "b" : "l"}
-            name={nav.label}
-            onClick={() => nav.onclick()}
-          />
-        )
-      })}
+      <ButtonBar
+        type={buttonType === 'menu' ? 'b' : 'l'}
+        name='menu'
+        onClick={() => handleButtonClick('menu')}
+      />
+      <ButtonBar
+        type={buttonType === 'home' ? 'b' : 'l'}
+        name='home'
+        onClick={() => handleButtonClick('home')}
+      />
+      <ButtonBar
+        type={buttonType === 'people' ? 'b' : 'l'}
+        name='people'
+        onClick={() => handleButtonClick('people')}
+      />
+      <ButtonBar
+        type={buttonType === 'send' ? 'b' : 'l'}
+        name='send'
+        onClick={() => handleButtonClick('send')}
+      />
+      <ButtonBar
+        type={buttonType === 'setting' ? 'b' : 'l'}
+        name='setting'
+        onClick={() => handleButtonClick('setting')}
+      />
+      <Logoutbutton>
+        <ButtonBar
+          type={buttonType === 'logout' ? 'b' : 'l'}
+          name='logout'
+          onClick={() => handleButtonClick('logout')}
+        />
+      </Logoutbutton>
     </SideBarDiv>
   )
 }
+
