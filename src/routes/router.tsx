@@ -3,7 +3,7 @@ import SettingsContent from '../screen/contents/settingsContent'
 import ChatContent from '../screen/contents/chatContent'
 import ProfileVolunteerContent from '../screen/profile'
 import VolunteerContent from '../screen/volunteer'
-import { Projects } from '../screen/projectsPage'
+import { Projects } from '../screen/projects'
 import { LoginPage } from '../screen/login'
 import App from '../App'
 

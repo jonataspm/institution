@@ -9,7 +9,7 @@ export const ButtonSideBar = styled.a<TypeProps>`
   color: black;
   display: flex;
   align-items: center;
-  min-height: 60px;
+  min-height: 40px;
   height: 10%;
   width: 100%;
   cursor: pointer;
@@ -20,6 +20,7 @@ export const ButtonSideBar = styled.a<TypeProps>`
     align-items: center;
     max-width: 60px;
     margin: auto;
+    font-size: 12px;
   }
 
   &.active {
