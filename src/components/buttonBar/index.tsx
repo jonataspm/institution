@@ -1,6 +1,7 @@
 import { ButtonSideBar } from "./style";
 import { Normalimage } from "../../images";
 import { Boldimage } from "../../images";
+import { useEffect, useState } from "react";
 
 
 export type ButtonType = "l" | "b";
@@ -13,16 +14,24 @@ type ButtonBarProps = {
 };
 
 export const ButtonBar = ({ type, name, onClick }: ButtonBarProps) => {
-    let src = "";
-    let active: ActiveType = "Notactive"
-    
-    if (type === "l") {
-      src = Normalimage[name];
-      active = "Notactive"
-    } else if (type === "b") {
-      src = Boldimage[name];
-      active = "active"
-    }
+
+    const [src, setSrc] = useState("")
+    const [active, setActive] = useState<ActiveType>("Notactive")
+
+    useEffect(() => {
+      switch(type) {
+        case "l":
+          setSrc(Normalimage[name])
+          setActive("Notactive")
+          break
+        case "b":
+          setSrc(Boldimage[name])
+          setActive("active")
+          break
+        default:
+          return 
+        }
+    }, [type, name])
   
     return (
       <ButtonSideBar className={active} onClick={onClick} type={type}>
