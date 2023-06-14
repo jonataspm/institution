@@ -31,6 +31,13 @@ export const SideBar = () => {
       name: 'people',
       onclick: () => {
         handleButtonClick('people')
+        navigate('/people')
+      },
+    },
+    {
+      name: 'briefcase',
+      onclick: () => {
+        handleButtonClick('briefcase')
         navigate('/projects')
       },
     },
@@ -50,7 +57,7 @@ export const SideBar = () => {
     },
     {
       name: 'logout',
-      onclick: () => navigate('/'),
+      onclick: () => navigate('/login'),
     },
   ]
 
