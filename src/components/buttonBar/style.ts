@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from 'styled-components';
 
 interface TypeProps {
-  type: 'l' | 'b';
+  type?: 'l' | 'b';
 }
 
 export const ButtonSideBar = styled.a<TypeProps>`

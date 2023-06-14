@@ -25,7 +25,7 @@ export function ButtonBar({ type, name, onClick }: ButtonBarProps) {
     }
   
     return (
-      <ButtonSideBar className={active} onClick={onClick} type={type}>
+      <ButtonSideBar className={active} onClick={onClick}>
         <div className="buttonContent">
           <img className="icon" src={src} alt={name} />
           <p>{name}</p>

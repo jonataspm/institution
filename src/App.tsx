@@ -5,8 +5,11 @@ import {NavBar} from './components/navBar'
 import {SideBar} from './components/sideBar'
 import { LoginPage } from './screen/login';
 import HomeContent from './screen/contents/homeContent';
+import VoluenteerContent from './screen/contents/volunteer';
+import ProfileVoluenteerContent from './screen/contents/volunteer/profile';
 
 
+//<VoluenteerContent />
 
 function App() {
   return (
@@ -16,7 +19,7 @@ function App() {
       <div className='sideRight'>
         <NavBar />
         <div className='sideContent'>
-          <HomeContent/>         
+          <VoluenteerContent/>         
         </div>
       </div>  
     </div>

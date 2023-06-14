@@ -12,6 +12,8 @@ import Blogout from './bold/logout.svg';
 import Bpeople from './bold/people.svg';
 import Bsetting from './bold/setting.svg';
 import Bbriefcase from './bold/briefcase.svg';
+import jonatas from './profiles/jonatas.png';
+import flavio from './profiles/flavio.png';
 
 interface ImagePaths {
   [key: string]: string;
@@ -35,5 +37,10 @@ export const Boldimage : ImagePaths = {
   people:Bpeople,
   setting:Bsetting,
   briefcase:Bbriefcase,
+}
+
+export const Profileimage : ImagePaths = {
+  jonatas: jonatas,
+  flavio: flavio
 }
 
