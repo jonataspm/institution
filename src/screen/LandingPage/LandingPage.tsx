@@ -59,17 +59,17 @@ export const LandingPage = (props: Props) => {
           <div>
             <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="group1" />
             <h2>Capacitação</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, illo! Architecto praesentium maiores nobis debitis officiis magni non voluptate excepturi laboriosam, laborum perferendis, neque, quam illum odit. Ut, expedita commodi.</p>
+            <p>Encontre mais voluntáios para sua organização. Nosso serviço personalizado de capacitação vai ajudar você a encontrar engajamento para seu trabalho de voluntariado.</p>
           </div>
           <div>
-            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="group2" />
+            <img src="https://images.unsplash.com/photo-1616587894289-86480e533129?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="group2" />
             <h2>Estratégia de comunicação</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, illo! Architecto praesentium maiores nobis debitis officiis magni non voluptate excepturi laboriosam, laborum perferendis, neque, quam illum odit. Ut, expedita commodi.</p>
+            <p>Crie uma presença online que comunique a personalidade da sua organização. Trabalhamos de perto com você para desenvolver uma estratégia de comunicação que capta o coração da sua audiência.</p>
           </div>
           <div>
-            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="group3" />
+            <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="group3" />
             <h2>Redes sociais</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, illo! Architecto praesentium maiores nobis debitis officiis magni non voluptate excepturi laboriosam, laborum perferendis, neque, quam illum odit. Ut, expedita commodi.</p>
+            <p>Melhore seu engajamento com nossa gestão de profissionais de redes sociais. Junte-se a uma plataforma cada vez mais importante e interaja com seus voluntários e potenciados voluntários.</p>
           </div>
         </div>
       </section>
