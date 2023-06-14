@@ -40,7 +40,7 @@ export const Boldimage: ImagePaths = {
   briefcase: Bbriefcase,
 }
 
-export const Profileimage: ImagePaths = {
+export const ProfileImage: ImagePaths = {
   jonatas: jonatas,
   flavio: flavio,
 }

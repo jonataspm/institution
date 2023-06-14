@@ -6,7 +6,7 @@ import {
   InputSearchBar,
   ProfileCard,
 } from './style'
-import { Profileimage } from '../../images'
+import { ProfileImage } from '../../images'
 
 //Material
 import SearchIcon from '@mui/icons-material/Search'
@@ -34,7 +34,7 @@ const VolunteerContent = () => {
           </BarCont>
 
           <ProfileCard onClick={() => navigate('/profile')}>
-            <img src={Profileimage['jonatas']} alt='jonatas' />
+            <img src={ProfileImage['jonatas']} alt='jonatas' />
             <div className='ProfileTexts'>
               <h4>Jonatas Pinheiro Mendes</h4>
               <p>Manutenção e Suporte Tecnico</p>
@@ -43,7 +43,7 @@ const VolunteerContent = () => {
           </ProfileCard>
 
           <ProfileCard>
-            <img src={Profileimage['flavio']} alt='flavio' />
+            <img src={ProfileImage['flavio']} alt='flavio' />
             <div className='ProfileTexts'>
               <h4>Flavio Eduardo</h4>
               <p>Ambulatorio</p>

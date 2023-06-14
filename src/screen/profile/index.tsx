@@ -1,8 +1,7 @@
-import React from 'react'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace'
 import { ProfileVolunteer } from './style'
 import { BarCont } from '../volunteer/style'
-import { Profileimage } from '../../images'
+import { ProfileImage } from '../../images'
 import { useNavigate } from 'react-router'
 
 const ProfileVolunteerContent = () => {
@@ -10,7 +9,7 @@ const ProfileVolunteerContent = () => {
   
   return (
     <ProfileVolunteer>
-      <a className='TitleProfile'>
+      <p  className='TitleProfile'>
         <KeyboardBackspaceIcon
           className='BackPointer'
           onClick={() => {
@@ -18,7 +17,7 @@ const ProfileVolunteerContent = () => {
           }}
         />
         <h1>Voluntários</h1>
-      </a>
+      </p>
 
       <div className='TitleProfileDisplay'>
         <BarCont>
@@ -26,7 +25,7 @@ const ProfileVolunteerContent = () => {
         </BarCont>
         <div className='Part1'>
           <div className='profilePart'>
-            <img src={Profileimage['jonatas']} alt='jonatas' />
+            <img src={ProfileImage['jonatas']} alt='jonatas' />
             <h3>Jonatas Pinheiro Mendes</h3>
             <p>
               Projeto: <b className='sit'>Manutenção e Suporte tecnico</b>
@@ -43,9 +42,3 @@ const ProfileVolunteerContent = () => {
 }
 
 export default ProfileVolunteerContent
-
-/* CODE SCAPE
-
-
-
-*/
