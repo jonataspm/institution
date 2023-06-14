@@ -1,15 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {NavBar} from './components/navBar'
-import {SideBar} from './components/sideBar'
-import { LoginPage } from './screen/login';
-
+import './App.css'
+import { Outlet } from 'react-router-dom'
+import { SideBar } from './components/sideBar'
+import { Header } from './components/header'
 
 function App() {
   return (
-      <LoginPage /> 
-  );
+    <div className='menu'>
+      <SideBar />
+      <div className='sideRight'>
+        <Header />
+        <Outlet />
+      </div>
+    </div>
+  )
 }
 
-export default App;
+export default App

@@ -1,45 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-:root{
-  --Pcolor: #514EFF;
-  --Pboldcolor: #3937C5 ;
-  --Scolor: #4240DB;
-  --Bcolor: #FFFFFF;
-  --Bbcolor: #BFBFBF;
-  --Bgcolor: #F0F0F0;
-  --SubColor: #E1E1F7;
-  --GradColor: linear-gradient(216.34deg, #514EFF 21.19%, #3937C5 93.46%);
+:root {
+  --Pcolor: #514eff;
+  --Pboldcolor: #3937c5;
+  --Scolor: #4240db;
+  --Bcolor: #ffffff;
+  --Bbcolor: #bfbfbf;
+  --Bgcolor: #f0f0f0;
+  --SubColor: #e1e1f7;
+  --GradColor: linear-gradient(216.34deg, #514eff 21.19%, #3937c5 93.46%);
 }
 
-*{
+* {
   box-sizing: border-box;
   font-family: 'inter', sans-serif;
   margin: 0;
 }
 
-body{
+body {
   background: var(--Bgcolor);
 }
 
-/*
-.menu{
+.menu {
   display: flex;
   width: 100%;
   height: 100vh;
 }
-.sideRight{
+.sideRight {
   width: 100%;
   height: 100vh;
 
-  .sideContent{
+  .sideContent {
     margin: 2%;
   }
 
-  .displayContent1{
+  .displayContent1 {
     margin-top: 1%;
     width: 100%;
     height: 80vh;
     border-radius: 11px;
-    background: var(--Bcolor); ;
-    box-shadow: 0 1px 5px 0px gray
+    background: var(--Bcolor);
+    box-shadow: 0 1px 5px 0px gray;
   }
-} */
+}

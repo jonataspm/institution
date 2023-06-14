@@ -1,37 +1,42 @@
-import React from "react";
-import { ButtonSideBar } from "./style";
-import { Normalimage } from "../../images";
-import { Boldimage } from "../../images";
+import { ButtonSideBar } from './style'
+import { Normalimage } from '../../images'
+import { Boldimage } from '../../images'
+import { useEffect, useState } from 'react'
 
-
-type ButtonType = "l" | "b";
+export type ButtonType = 'l' | 'b'
+export type ActiveType = 'active' | 'NotActive'
 
 type ButtonBarProps = {
-  type: ButtonType;
-  name: string;
-  onClick?: () => void;
-};
+  type: ButtonType
+  name: string
+  onClick?: () => void
+}
 
-export function ButtonBar({ type, name, onClick }: ButtonBarProps) {
-    let src = "";
-    let active = ""
-    
-    if (type === "l") {
-      src = Normalimage[name];
-      active = "Notactive"
-    } else if (type === "b") {
-      src = Boldimage[name];
-      active = "active"
+export const ButtonBar = ({ type, name, onClick }: ButtonBarProps) => {
+  const [src, setSrc] = useState('')
+  const [active, setActive] = useState<ActiveType>('NotActive')
+
+  useEffect(() => {
+    switch (type) {
+      case 'l':
+        setSrc(Normalimage[name])
+        setActive('NotActive')
+        break
+      case 'b':
+        setSrc(Boldimage[name])
+        setActive('active')
+        break
+      default:
+        return
     }
-  
-    const href = `#${name}`;
-  
-    return (
-      <ButtonSideBar className={active} href={href} onClick={onClick} type={type}>
-        <div className="buttonContent">
-          <img className="icon" src={src} alt={name} />
-          <p>{name}</p>
-        </div>
-      </ButtonSideBar>
-    );
-  }
+  }, [type, name])
+
+  return (
+    <ButtonSideBar className={active} onClick={onClick} type={type}>
+      <div className='buttonContent'>
+        <img className='icon' src={src} alt={name} />
+        <p>{name}</p>
+      </div>
+    </ButtonSideBar>
+  )
+}

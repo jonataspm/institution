@@ -1,41 +1,82 @@
-import React, { Component } from "react";
-import { ButtonBar } from "../buttonBar/index";
-import { Logoutbutton, SideBarDiv } from "./style";
+import { ButtonBar } from '../buttonBar/index'
+import { SideBarDiv } from './style'
 
-type SideBarProps = {
-  selectedButtonType: string;
-};
+// Hooks
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-type SideBarState = {
-  selectedButtonType: string;
-};
-
-export class SideBar extends Component<SideBarProps, SideBarState> {
-  constructor(props: SideBarProps) {
-    super(props);
-    this.state = {
-      selectedButtonType: "",
-    };
-    this.handleButtonClick = this.handleButtonClick.bind(this);
-  }
-
-  handleButtonClick(buttonType: string) {
-    this.setState({ selectedButtonType: buttonType });
-  }
-
-  render() {
-    const buttonType = this.state.selectedButtonType;
-    return (
-      <SideBarDiv>
-        <ButtonBar type={buttonType === "menu"    ? "b" : "l"} name="menu" onClick={() => this.handleButtonClick("menu")}/>
-        <ButtonBar type={buttonType === "home"    ? "b" : "l"} name="home" onClick={() => this.handleButtonClick("home")}/>
-        <ButtonBar type={buttonType === "people"  ? "b" : "l"} name="people" onClick={() => this.handleButtonClick("people")}/>
-        <ButtonBar type={buttonType === "send"    ? "b" : "l"} name="send" onClick={() => this.handleButtonClick("send")}/>
-        <ButtonBar type={buttonType === "setting" ? "b" : "l"} name="setting" onClick={() => this.handleButtonClick("setting")} />
-        <Logoutbutton>
-          <ButtonBar type={buttonType === "logout" ? "b" : "l"} name="logout"onClick={() => this.handleButtonClick("logout")}/>
-        </Logoutbutton>
-      </SideBarDiv>
-    );
-  }
+interface ISideBarDiv {
+  name: string
+  onclick(): void
 }
+
+export const SideBar = () => {
+  const navigate = useNavigate()
+
+  const [selectedButton, setSelectedButton] = useState('home')
+
+  const sideBarOptions: ISideBarDiv[] = [
+    {
+      name: 'menu',
+      onclick: () => handleButtonClick('menu'),
+    },
+    {
+      name: 'home',
+      onclick: () => {
+        handleButtonClick('home')
+        navigate('/home')
+      },
+    },
+    {
+      name: 'people',
+      onclick: () => {
+        handleButtonClick('people')
+        navigate('/people')
+      },
+    },
+    {
+      name: 'briefcase',
+      onclick: () => {
+        handleButtonClick('briefcase')
+        navigate('/projects')
+      },
+    },
+    {
+      name: 'send',
+      onclick: () => {
+        handleButtonClick('send')
+        navigate('/send')
+      },
+    },
+    {
+      name: 'setting',
+      onclick: () => {
+        handleButtonClick('setting')
+        navigate('/settings')
+      },
+    },
+    {
+      name: 'logout',
+      onclick: () => navigate('/login'),
+    },
+  ]
+
+  const handleButtonClick = (buttonType: string) => {
+    setSelectedButton(buttonType)
+  }
+
+  return (
+    <SideBarDiv>
+      {sideBarOptions.map((btn, key) => (
+        <ButtonBar
+          key={key}
+          type={selectedButton === `${btn.name}` ? 'b' : 'l'}
+          name={`${btn.name}`}
+          onClick={btn.onclick}
+        />
+      ))}
+    </SideBarDiv>
+  )
+}
+
+export default SideBar

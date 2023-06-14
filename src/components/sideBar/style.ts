@@ -1,5 +1,4 @@
-import React from "react";
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const SideBarDiv = styled.div`
   background: var(--Bcolor);
@@ -11,11 +10,12 @@ export const SideBarDiv = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-`;
+  gap: 8px;
+`
 
 export const Logoutbutton = styled.div`
   position: absolute;
   bottom: 0%;
   width: 100%;
   text-align: center;
-`;
+`
