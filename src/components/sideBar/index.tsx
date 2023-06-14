@@ -31,21 +31,21 @@ export const SideBar = () => {
       name: 'people',
       onclick: () => {
         handleButtonClick('people')
-        navigate('/people')
+        navigate('/projects')
       },
     },
     {
       name: 'send',
       onclick: () => {
         handleButtonClick('send')
-        navigate('/projects')
+        navigate('/send')
       },
     },
     {
       name: 'setting',
       onclick: () => {
         handleButtonClick('setting')
-        navigate('/setting')
+        navigate('/settings')
       },
     },
     {

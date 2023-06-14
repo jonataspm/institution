@@ -1,8 +1,7 @@
-import React from "react";
-import styled, { css } from 'styled-components';
+import styled from 'styled-components'
 
 interface TypeProps {
-  type: 'l' | 'b';
+  type?: 'l' | 'b'
 }
 
 export const ButtonSideBar = styled.a<TypeProps>`
@@ -13,26 +12,26 @@ export const ButtonSideBar = styled.a<TypeProps>`
   min-height: 60px;
   height: 10%;
   width: 100%;
-  
+  cursor: pointer;
 
-    .buttonContent {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 60px;
-      margin: auto;
-    }
+  .buttonContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60px;
+    margin: auto;
+  }
 
-    &.active {
-      background-color: var(--Pcolor);
-      color: white;
+  &.active {
+    background-color: var(--Pcolor);
+    color: white;
 
-      img{
-        filter: brightness(1000%);
-      }
+    img {
+      filter: brightness(1000%);
     }
-    
-    &:hover:not(.active) {
-      background-color: var(--SubColor);
-    }
-`;
+  }
+
+  &:hover:not(.active) {
+    background-color: var(--SubColor);
+  }
+`

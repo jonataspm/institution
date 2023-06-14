@@ -1,12 +1,10 @@
-import { Container, Table } from './style'
+import { Container } from './style'
 
 export const Projects = () => {
   return (
     <Container>
       <h1>Projetos</h1>
-      <Table>
-        
-      </Table>
+      <div className='displayContent1' />
     </Container>
   )
 }
