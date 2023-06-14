@@ -5,25 +5,15 @@ import { SideBarDiv } from './style'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-type SideBarProps = {
-  selectedButtonType: string
-}
-
-// type SideBarState = {
-//   selectedButtonType: string;
-// };
-
 interface ISideBarDiv {
   name: string
   onclick(): void
 }
 
-export const SideBar = ({ selectedButtonType }: SideBarProps) => {
+export const SideBar = () => {
   const navigate = useNavigate()
 
-  const [selectedButton, setSelectedButton] = useState(
-    'home' || selectedButtonType
-  )
+  const [selectedButton, setSelectedButton] = useState('home')
 
   const sideBarOptions: ISideBarDiv[] = [
     {
@@ -48,7 +38,7 @@ export const SideBar = ({ selectedButtonType }: SideBarProps) => {
       name: 'send',
       onclick: () => {
         handleButtonClick('send')
-        navigate('/send')
+        navigate('/projects')
       },
     },
     {

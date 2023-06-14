@@ -6,7 +6,7 @@ import { NavBar } from './components/navBar'
 function App() {
   return (
     <div className='menu'>
-      <SideBar selectedButtonType='' />
+      <SideBar />
       <div className='sideRight'>
         <NavBar />
         <Outlet />
